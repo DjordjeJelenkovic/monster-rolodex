@@ -15,6 +15,8 @@ class App extends Component{
       monsters: [],
       searchField: ''
     };
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -35,6 +37,8 @@ class App extends Component{
       monster.name.toLowerCase().includes(searchField.toLowerCase()))
     return (
       <div className="App">
+        <h1>Monsters Rolodex</h1>
+
         {/* <input type='search' placeholder='seacrh monsters' onChange={e => this.setState({ searchField: e.target.value })}/> */}
         <SearchBox placeholder='seacrh monsters' handleChange={this.handleChange}/>
 
